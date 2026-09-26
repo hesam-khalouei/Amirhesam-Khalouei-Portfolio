@@ -1,159 +1,170 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" id="html-root">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alireza Bazli Khatibi | Senior Product Designer</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amirhesam Khalouei | Senior Product Designer</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <style>
-    /* ===== English Fonts ===== */
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Sans:wght@400;500;600&display=swap');
+      /* ===== English Fonts ===== */
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Sans:wght@400;500;600&display=swap");
 
-    /* ===== Persian Font: IranYekanX (Variable Font) ===== */
-    @font-face {
-        font-family: 'IranYekanX';
-        src: url('./Assets/fonts/IranYekanX/IRANYekanXVFaNumVF.woff2') format('woff2-variations'),
-             url('./Assets/fonts/IranYekanX/IRANYekanXVFaNumVF.woff2') format('woff2');
+      /* ===== Persian Font: IranYekanX (Variable Font) ===== */
+      @font-face {
+        font-family: "IranYekanX";
+        src:
+          url("./Assets/fonts/IranYekanX/IRANYekanXVFaNumVF.woff2")
+            format("woff2-variations"),
+          url("./Assets/fonts/IranYekanX/IRANYekanXVFaNumVF.woff2")
+            format("woff2");
         font-weight: 100 900;
         font-style: normal;
         font-display: swap;
-    }
+      }
 
-    /* ===== Base Typography ===== */
-    body {
-        font-family: 'Inter', system-ui, sans-serif;
-    }
+      /* ===== Base Typography ===== */
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+      }
 
-    /* RTL: Apply Persian font everywhere */
-    html[dir="rtl"] body,
-    html[dir="rtl"] input,
-    html[dir="rtl"] textarea,
-    html[dir="rtl"] button,
-    html[dir="rtl"] select,
-    html[dir="rtl"] .lang-toggle .lang-label,
-    html[dir="rtl"] .font-mono {
-        font-family: 'IranYekanX', 'Inter', system-ui, sans-serif;
-    }
+      /* RTL: Apply Persian font everywhere */
+      html[dir="rtl"] body,
+      html[dir="rtl"] input,
+      html[dir="rtl"] textarea,
+      html[dir="rtl"] button,
+      html[dir="rtl"] select,
+      html[dir="rtl"] .lang-toggle .lang-label,
+      html[dir="rtl"] .font-mono {
+        font-family: "IranYekanX", "Inter", system-ui, sans-serif;
+      }
 
-    /* ===== RTL Typography Tweaks ===== */
-    html[dir="rtl"] .tracking-tighter {
+      /* ===== RTL Typography Tweaks ===== */
+      html[dir="rtl"] .tracking-tighter {
         letter-spacing: 0;
-    }
+      }
 
-    html[dir="rtl"] .tracking-\[3px\] {
+      html[dir="rtl"] .tracking-\[3px\] {
         letter-spacing: 1px;
-    }
+      }
 
-    html[dir="rtl"] h1,
-    html[dir="rtl"] h2,
-    html[dir="rtl"] h3,
-    html[dir="rtl"] h4 {
+      html[dir="rtl"] h1,
+      html[dir="rtl"] h2,
+      html[dir="rtl"] h3,
+      html[dir="rtl"] h4 {
         line-height: 1.5;
-    }
+      }
 
-    html[dir="rtl"] p {
+      html[dir="rtl"] p {
         line-height: 1.9;
-    }
+      }
 
-    /* ===== Scroll Animations ===== */
-    .section {
+      /* ===== Scroll Animations ===== */
+      .section {
         opacity: 0;
         transform: translateY(20px);
         transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+      }
 
-    .section.visible {
+      .section.visible {
         opacity: 1;
         transform: translateY(0);
-    }
+      }
 
-    /* ===== Nav ===== */
-    .nav-link {
+      /* ===== Nav ===== */
+      .nav-link {
         transition: all 0.2s ease;
-    }
+      }
 
-    .nav-link:hover {
+      .nav-link:hover {
         color: #111827;
-    }
+      }
 
-    .nav-active {
+      .nav-active {
         color: #111827;
         font-weight: 600;
-    }
+      }
 
-    .sticky-nav {
+      .sticky-nav {
         backdrop-filter: blur(12px);
-    }
+      }
 
-    /* ===== Cards ===== */
-    .work-card {
+      /* ===== Cards ===== */
+      .work-card {
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         border: 1px solid #e5e7eb;
-    }
+      }
 
-    .work-card:hover {
+      .work-card:hover {
         transform: translateY(-12px);
         box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
         border-color: #111827;
-    }
+      }
 
-    .work-card:active {
+      .work-card:active {
         transform: scale(0.985);
         box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-    }
+      }
 
-    .what-i-do-card {
+      .what-i-do-card {
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         border: 1px solid #e5e7eb;
-    }
+      }
 
-    .what-i-do-card:hover {
+      .what-i-do-card:hover {
         transform: translateY(-12px);
         box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
         border-color: #111827;
-    }
+      }
 
-    .what-i-do-card:active {
+      .what-i-do-card:active {
         transform: scale(0.985);
         box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-    }
+      }
 
-    .premium-shadow {
-        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
-    }
+      .premium-shadow {
+        box-shadow:
+          0 10px 15px -3px rgb(0 0 0 / 0.05),
+          0 4px 6px -4px rgb(0 0 0 / 0.05);
+      }
 
-    .modern-icon {
-        transition: transform 0.3s ease, color 0.3s ease;
-    }
+      .modern-icon {
+        transition:
+          transform 0.3s ease,
+          color 0.3s ease;
+      }
 
-    .new-icon {
-        transition: transform 0.3s ease, color 0.3s ease;
-    }
+      .new-icon {
+        transition:
+          transform 0.3s ease,
+          color 0.3s ease;
+      }
 
-    .work-card:hover .modern-icon {
+      .work-card:hover .modern-icon {
         transform: scale(1.1);
         color: #fff;
-    }
+      }
 
-    .what-i-do-card:hover .new-icon {
+      .what-i-do-card:hover .new-icon {
         transform: scale(1.1);
         color: #111827;
-    }
+      }
 
-    /* ===== Buttons ===== */
-    .btn-primary {
+      /* ===== Buttons ===== */
+      .btn-primary {
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+      }
 
-    .btn-primary:hover {
+      .btn-primary:hover {
         transform: translateY(-2px);
         box-shadow: 0 10px 15px -3px rgb(17 24 39 / 0.2);
-    }
+      }
 
-    /* ===== Language Toggle ===== */
-    .lang-toggle {
+      /* ===== Language Toggle ===== */
+      .lang-toggle {
         position: relative;
         display: inline-flex;
         align-items: center;
@@ -167,655 +178,1204 @@
         background: white;
         transition: all 0.2s ease;
         white-space: nowrap;
-    }
+      }
 
-    .lang-toggle:hover {
+      .lang-toggle:hover {
         border-color: #111827;
         background: #f9fafb;
-    }
+      }
 
-    .lang-toggle .lang-label {
-        font-family: 'IranYekanX', 'Inter', sans-serif;
-    }
+      .lang-toggle .lang-label {
+        font-family: "IranYekanX", "Inter", sans-serif;
+      }
 
-    /* ===== Grid ===== */
-    .project-grid {
+      /* ===== Grid ===== */
+      .project-grid {
         align-items: stretch;
-    }
-</style>
-</head>
+      }
+    </style>
+  </head>
 
-<body class="bg-white text-gray-900">
+  <body class="bg-white text-gray-900">
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/95 border-b border-gray-100 sticky-nav">
-        <div class="max-w-screen-2xl mx-auto px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center gap-x-3">
-                    <div class="w-9 h-9 bg-gray-900 rounded-full flex items-center justify-center">
-                        <span class="text-white text-xl font-semibold tracking-tighter">AB</span>
-                    </div>
-                    <div>
-                        <span class="font-semibold text-xl tracking-tight" data-lang="en">Alireza Khatibi</span>
-                        <span class="font-semibold text-xl tracking-tight" data-lang="fa" style="display:none;">علیرضا
-                            خطیبی</span>
-                    </div>
-                </div>
-                <div>
-                    <div class="hidden md:flex items-center gap-x-10 text-sm">
-                        <a href="#about" class="nav-link relative group text-gray-600 hover:text-gray-900">
-                            <span data-lang="en">About</span>
-                            <span data-lang="fa" style="display:none;">درباره من</span>
-                            <span
-                                class="absolute left-0 -bottom-1 h-[2px] w-0 bg-gray-900 transition-all duration-300 ease-out group-hover:w-full"></span>
-                        </a>
-
-                        <a href="#what-i-do" class="nav-link relative group text-gray-600 hover:text-gray-900">
-                            <span data-lang="en">What I Do</span>
-                            <span data-lang="fa" style="display:none;">تخصص‌ها</span>
-                            <span
-                                class="absolute left-0 -bottom-1 h-[2px] w-0 bg-gray-900 transition-all duration-300 ease-out group-hover:w-full"></span>
-                        </a>
-
-                        <a href="#process" class="nav-link relative group text-gray-600 hover:text-gray-900">
-                            <span data-lang="en">Process</span>
-                            <span data-lang="fa" style="display:none;">فرآیند</span>
-                            <span
-                                class="absolute left-0 -bottom-1 h-[2px] w-0 bg-gray-900 transition-all duration-300 ease-out group-hover:w-full"></span>
-                        </a>
-
-                        <a href="#work" class="nav-link relative group text-gray-600 hover:text-gray-900">
-                            <span data-lang="en">Work</span>
-                            <span data-lang="fa" style="display:none;">نمونه کارها</span>
-                            <span
-                                class="absolute left-0 -bottom-1 h-[2px] w-0 bg-gray-900 transition-all duration-300 ease-out group-hover:w-full"></span>
-                        </a>
-
-                        <a href="#contact" class="nav-link relative group text-gray-600 hover:text-gray-900">
-                            <span data-lang="en">Contact</span>
-                            <span data-lang="fa" style="display:none;">تماس</span>
-                            <span
-                                class="absolute left-0 -bottom-1 h-[2px] w-0 bg-gray-900 transition-all duration-300 ease-out group-hover:w-full"></span>
-                        </a>
-                    </div>
-                </div>
-                <div class="flex items-center gap-x-4">
-                    <!-- Language toggle button -->
-                    <button type="button" class="lang-toggle" id="langToggle" onclick="toggleLanguage()">
-                        <i class="fa fa-globe text-sm"></i>
-                        <span class="lang-label" id="langLabel">فارسی</span>
-                    </button>
-
-                    <a href="https://www.linkedin.com/in/alireza-khatibi-1a6587232/" target="_blank"
-                        class="flex items-center gap-x-2 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">
-                        <i class="fa-brands fa-linkedin text-lg"></i>
-                        <span class="hidden md:inline" data-lang="en">LinkedIn</span>
-                        <span class="hidden md:inline" data-lang="fa" style="display:none;">لینکدین</span>
-                    </a>
-                    <a href="#contact"
-                        class="hidden md:block px-6 py-2.5 text-sm font-medium border border-gray-900 hover:bg-gray-900 hover:text-white transition-all rounded-full">
-                        <span data-lang="en">Get in touch</span>
-                        <span data-lang="fa" style="display:none;">تماس بگیرید</span>
-                    </a>
-                    <button class="md:hidden w-10 h-10 flex items-center justify-center" onclick="toggleMobileMenu()">
-                        <i class="fa fa-bars text-xl"></i>
-                    </button>
-                </div>
+    <nav
+      class="sticky top-0 z-50 bg-white/95 border-b border-gray-100 sticky-nav"
+    >
+      <div class="max-w-screen-2xl mx-auto px-8">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex items-center gap-x-3">
+            <div
+              class="w-9 h-9 bg-gray-900 rounded-full flex items-center justify-center"
+            >
+              <span class="text-white text-xl font-semibold tracking-tighter"
+                >AB</span
+              >
             </div>
+            <div>
+              <span class="font-semibold text-xl tracking-tight" data-lang="en"
+                >AmirHesam Khalouei</span
+              >
+              <span
+                class="font-semibold text-xl tracking-tight"
+                data-lang="fa"
+                style="display: none"
+                >علیرضا خطیبی</span
+              >
+            </div>
+          </div>
+          <div>
+            <div class="hidden md:flex items-center gap-x-10 text-sm">
+              <a
+                href="#about"
+                class="nav-link relative group text-gray-600 hover:text-gray-900"
+              >
+                <span data-lang="en">About</span>
+                <span data-lang="fa" style="display: none">درباره من</span>
+                <span
+                  class="absolute left-0 -bottom-1 h-[2px] w-0 bg-gray-900 transition-all duration-300 ease-out group-hover:w-full"
+                ></span>
+              </a>
+
+              <a
+                href="#what-i-do"
+                class="nav-link relative group text-gray-600 hover:text-gray-900"
+              >
+                <span data-lang="en">What I Do</span>
+                <span data-lang="fa" style="display: none">تخصص‌ها</span>
+                <span
+                  class="absolute left-0 -bottom-1 h-[2px] w-0 bg-gray-900 transition-all duration-300 ease-out group-hover:w-full"
+                ></span>
+              </a>
+
+              <a
+                href="#process"
+                class="nav-link relative group text-gray-600 hover:text-gray-900"
+              >
+                <span data-lang="en">Process</span>
+                <span data-lang="fa" style="display: none">فرآیند</span>
+                <span
+                  class="absolute left-0 -bottom-1 h-[2px] w-0 bg-gray-900 transition-all duration-300 ease-out group-hover:w-full"
+                ></span>
+              </a>
+
+              <a
+                href="#work"
+                class="nav-link relative group text-gray-600 hover:text-gray-900"
+              >
+                <span data-lang="en">Work</span>
+                <span data-lang="fa" style="display: none">نمونه کارها</span>
+                <span
+                  class="absolute left-0 -bottom-1 h-[2px] w-0 bg-gray-900 transition-all duration-300 ease-out group-hover:w-full"
+                ></span>
+              </a>
+
+              <a
+                href="#contact"
+                class="nav-link relative group text-gray-600 hover:text-gray-900"
+              >
+                <span data-lang="en">Contact</span>
+                <span data-lang="fa" style="display: none">تماس</span>
+                <span
+                  class="absolute left-0 -bottom-1 h-[2px] w-0 bg-gray-900 transition-all duration-300 ease-out group-hover:w-full"
+                ></span>
+              </a>
+            </div>
+          </div>
+          <div class="flex items-center gap-x-4">
+            <!-- Language toggle button -->
+            <button
+              type="button"
+              class="lang-toggle"
+              id="langToggle"
+              onclick="toggleLanguage()"
+            >
+              <i class="fa fa-globe text-sm"></i>
+              <span class="lang-label" id="langLabel">فارسی</span>
+            </button>
+
+            <a
+              href="https://www.linkedin.com/in/hesam-khalouei"
+              target="_blank"
+              class="flex items-center gap-x-2 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              <i class="fa-brands fa-linkedin text-lg"></i>
+              <span class="hidden md:inline" data-lang="en">LinkedIn</span>
+              <span
+                class="hidden md:inline"
+                data-lang="fa"
+                style="display: none"
+                >لینکدین</span
+              >
+            </a>
+            <a
+              href="#contact"
+              class="hidden md:block px-6 py-2.5 text-sm font-medium border border-gray-900 hover:bg-gray-900 hover:text-white transition-all rounded-full"
+            >
+              <span data-lang="en">Get in touch</span>
+              <span data-lang="fa" style="display: none">تماس بگیرید</span>
+            </a>
+            <button
+              class="md:hidden w-10 h-10 flex items-center justify-center"
+              onclick="toggleMobileMenu()"
+            >
+              <i class="fa fa-bars text-xl"></i>
+            </button>
+          </div>
         </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="max-w-screen-2xl mx-auto px-8 pt-16 pb-20">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <div class="inline-flex items-center gap-x-2 px-4 py-1.5 bg-gray-100 rounded-full mb-6">
-                    <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-                    <span class="text-sm font-medium text-gray-700" data-lang="en">Available for select projects in
-                        2026</span>
-                    <span class="text-sm font-medium text-gray-700" data-lang="fa" style="display:none;">پذیرش پروژه‌های
-                        محدود در سال ۲۰۲۶</span>
-                </div>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div
+            class="inline-flex items-center gap-x-2 px-4 py-1.5 bg-gray-100 rounded-full mb-6"
+          >
+            <div
+              class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"
+            ></div>
+            <span class="text-sm font-medium text-gray-700" data-lang="en"
+              >Available for select projects in 2026</span
+            >
+            <span
+              class="text-sm font-medium text-gray-700"
+              data-lang="fa"
+              style="display: none"
+              >پذیرش پروژه‌های محدود در سال ۲۰۲۶</span
+            >
+          </div>
 
-                <h1 class="text-6xl md:text-7xl font-semibold tracking-tighter leading-none mb-6">
-                    <span data-lang="en">Alireza Khatibi</span>
-                    <span data-lang="fa" style="display:none;">علیرضا خطیبی</span>
-                </h1>
+          <h1
+            class="text-6xl md:text-7xl font-semibold tracking-tighter leading-none mb-6"
+          >
+            <span data-lang="en">AmirHesam Khalouei</span>
+            <span data-lang="fa" style="display: none">امیرحسام خالویی</span>
+          </h1>
 
-                <p class="text-2xl text-gray-600 max-w-md mb-8">
-                    <span data-lang="en">Senior Product Designer &amp; Fintech Strategist</span>
-                    <span data-lang="fa" style="display:none;">طراح ارشد محصول و استراتژیست فین‌تک</span>
-                </p>
+          <p class="text-2xl text-gray-600 max-w-md mb-8">
+            <span data-lang="en"
+              >Senior Product Designer &amp; Fintech Strategist</span
+            >
+            <span data-lang="fa" style="display: none"
+              >طراح ارشد محصول و استراتژیست فین‌تک</span
+            >
+          </p>
 
-                <div class="flex flex-wrap gap-4">
-                    <a href="#work"
-                        class="px-8 py-4 bg-gray-900 text-white rounded-full font-medium hover:bg-black transition-all flex items-center gap-x-2 btn-primary">
-                        <span data-lang="en">View selected work</span>
-                        <span data-lang="fa" style="display:none;">مشاهده نمونه‌کارها</span>
-                        <i class="fa fa-arrow-right" data-lang="en"></i>
-                        <i class="fa fa-arrow-left" data-lang="fa" style="display:none;"></i>
-                    </a>
-                    <a href="#contact"
-                        class="px-8 py-4 border border-gray-300 hover:border-gray-900 rounded-full font-medium transition-all">
-                        <span data-lang="en">Let’s talk</span>
-                        <span data-lang="fa" style="display:none;">گفتگو کنیم</span>
-                    </a>
-                </div>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="#work"
+              class="px-8 py-4 bg-gray-900 text-white rounded-full font-medium hover:bg-black transition-all flex items-center gap-x-2 btn-primary"
+            >
+              <span data-lang="en">View selected work</span>
+              <span data-lang="fa" style="display: none"
+                >مشاهده نمونه‌کارها</span
+              >
+              <i class="fa fa-arrow-right" data-lang="en"></i>
+              <i
+                class="fa fa-arrow-left"
+                data-lang="fa"
+                style="display: none"
+              ></i>
+            </a>
+            <a
+              href="#contact"
+              class="px-8 py-4 border border-gray-300 hover:border-gray-900 rounded-full font-medium transition-all"
+            >
+              <span data-lang="en">Let’s talk</span>
+              <span data-lang="fa" style="display: none">گفتگو کنیم</span>
+            </a>
+          </div>
 
-                <div class="mt-8 flex items-center gap-x-6 text-sm text-gray-500">
-                    <div data-lang="en">16 years of experience</div>
-                    <div data-lang="fa" style="display:none;">۱۶ سال تجربه</div>
-                    <div class="w-px h-3 bg-gray-300"></div>
-                    <div data-lang="en">Tehran, Iran</div>
-                    <div data-lang="fa" style="display:none;">تهران، ایران</div>
-                </div>
-            </div>
-
-            <div class="relative">
-                <div class="aspect-[1] bg-gray-100 rounded-3xl overflow-hidden border border-gray-200">
-                    <img src="./Assets/myPicture.jpg" alt="Alireza Bazli Khatibi" class="w-full h-full object-cover">
-                </div>
-            </div>
+          <div class="mt-8 flex items-center gap-x-6 text-sm text-gray-500">
+            <div data-lang="en">8 years of experience</div>
+            <div data-lang="fa" style="display: none">8 سال تجربه</div>
+            <div class="w-px h-3 bg-gray-300"></div>
+            <div data-lang="en">Tehran, Iran</div>
+            <div data-lang="fa" style="display: none">تهران، ایران</div>
+          </div>
         </div>
+
+        <div class="relative">
+          <div
+            class="aspect-[1] bg-gray-100 rounded-3xl overflow-hidden border border-gray-200"
+          >
+            <img
+              src="./Assets/AmirhesamKhalouei.png"
+              alt="Amirhesam Khalouei"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- About Me -->
-    <section id="about" class="section max-w-screen-2xl mx-auto px-8 py-20 border-t">
-        <div class="max-w-3xl">
-            <div class="uppercase tracking-[3px] text-xs font-medium text-gray-500 mb-4" data-lang="en">ABOUT ME</div>
-            <div class="uppercase tracking-[3px] text-xs font-medium text-gray-500 mb-4" data-lang="fa"
-                style="display:none;">درباره من</div>
-            <h2 class="text-5xl font-semibold tracking-tighter mb-8">
-                <span data-lang="en">I design products that move markets.</span>
-                <span data-lang="fa" style="display:none;">محصولاتی طراحی می‌کنم که بازار را متحول می‌کنند.</span>
-            </h2>
-
-            <div class="prose prose-lg text-gray-600 max-w-2xl">
-                <p data-lang="en">Product designer with 16 years of experience creating digital products across
-                    financial services, technology, and e-commerce. I specialise in building intuitive platforms that
-                    drive real business outcomes — from algorithmic trading systems to credit platforms and fintech
-                    infrastructure.</p>
-                <p data-lang="fa" style="display:none;">طراح محصول با ۱۶ سال تجربه در خلق محصولات دیجیتال در حوزه‌های
-                    خدمات مالی، فناوری و تجارت الکترونیک. تخصص من ساخت پلتفرم‌های شهودی است که نتایج تجاری واقعی به
-                    ارمغان می‌آورند — از سیستم‌های معاملات الگوریتمی تا پلتفرم‌های اعتباری و زیرساخت‌های فین‌تک.</p>
-                <p data-lang="en">Currently collaborating with Mazdak Financial Technology on RWA and tokenisation
-                    initiatives, while leading product design for Mazdax.</p>
-                <p data-lang="fa" style="display:none;">در حال حاضر با فناوری مالی مزدک در زمینه طرح‌های RWA و
-                    توکن‌سازی همکاری می‌کنم و طراحی محصول مزدکس را رهبری می‌کنم.</p>
-            </div>
+    <section
+      id="about"
+      class="section max-w-screen-2xl mx-auto px-8 py-20 border-t"
+    >
+      <div class="max-w-3xl">
+        <div
+          class="uppercase tracking-[3px] text-xs font-medium text-gray-500 mb-4"
+          data-lang="en"
+        >
+          ABOUT ME
         </div>
+        <div
+          class="uppercase tracking-[3px] text-xs font-medium text-gray-500 mb-4"
+          data-lang="fa"
+          style="display: none"
+        >
+          درباره من
+        </div>
+        <h2 class="text-5xl font-semibold tracking-tighter mb-8">
+          <span data-lang="en">I design products that move markets.</span>
+          <span data-lang="fa" style="display: none"
+            >محصولاتی طراحی می‌کنم که بازار را متحول می‌کنند.</span
+          >
+        </h2>
+
+        <div class="prose prose-lg text-gray-600 max-w-2xl">
+          <p data-lang="en">
+            Data-informed Senior Product Designer specialized in building
+            scalable design systems and optimizing core workflows across
+            high-growth platforms. With a track record of driving measurable
+            business impact—from cutting handoff times by 30% to optimizing
+            operational efficiency—I help teams build products that scale.
+          </p>
+          <p data-lang="fa" style="display: none">
+            با رهبری طراحی و توسعه سیستم‌های دیزاین سازمانی و بهینه‌سازی
+            جریان‌های کاربری، توانسته‌ام هماهنگی میان دیزاین و توسعه را تا ۳۰٪
+            بهبود دهم و بهره‌وری تیم‌ها را در محصولات فین‌تک و لجستیک متحول کنم.
+            رویکرد من بر پایه تحلیل دقیق داده‌ها، پژوهش کاربر و همکاری نزدیک با
+            تیم‌های محصول و مهندسی است.
+          </p>
+          <p data-lang="en">
+            Currently leading product design and scalable design systems at
+            EBCOM for enterprise and FinTech solutions.
+          </p>
+          <p data-lang="fa" style="display: none">
+            در حال حاضر مشغول هدایت طراحی محصول و توسعه دیزاین سیستم‌ها در EBCOM
+            برای محصولات پرترافیک سازمانی و فین‌تک.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- What I Do -->
-    <section id="what-i-do" class="section max-w-screen-2xl mx-auto px-8 py-20 bg-gray-50 rounded-3xl">
-        <div class="max-w-screen">
-            <div class="uppercase tracking-[3px] text-xs font-medium text-gray-500 mb-4" data-lang="en">EXPERTISE</div>
-            <div class="uppercase tracking-[3px] text-xs font-medium text-gray-500 mb-4" data-lang="fa"
-                style="display:none;">تخصص‌ها</div>
-            <h2 class="text-5xl font-semibold tracking-tighter mb-12">
-                <span data-lang="en">What I do</span>
-                <span data-lang="fa" style="display:none;">چه کارهایی انجام می‌دهم</span>
-            </h2>
-
-            <div class="grid gap-6 project-grid">
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 project-grid">
-                    <div class="bg-white p-8 rounded-3xl border what-i-do-card">
-                        <i class="fa fa-palette text-3xl text-gray-400 mb-6 new-icon"></i>
-                        <h3 class="font-semibold text-xl mb-2" data-lang="en">Product Design</h3>
-                        <h3 class="font-semibold text-xl mb-2" data-lang="fa" style="display:none;">طراحی محصول</h3>
-                        <p class="text-gray-600" data-lang="en">End-to-end design of complex digital products and
-                            platforms.</p>
-                        <p class="text-gray-600" data-lang="fa" style="display:none;">طراحی سرتاسری محصولات و پلتفرم‌های
-                            دیجیتال پیچیده.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-3xl border what-i-do-card">
-                        <i class="fa fa-layer-group text-3xl text-gray-400 mb-6 new-icon"></i>
-                        <h3 class="font-semibold text-xl mb-2" data-lang="en">UX/UI &amp; Design Systems</h3>
-                        <h3 class="font-semibold text-xl mb-2" data-lang="fa" style="display:none;">تجربه/رابط کاربری و
-                            سیستم‌های طراحی</h3>
-                        <p class="text-gray-600" data-lang="en">Creating scalable design systems and delightful user
-                            interfaces.</p>
-                        <p class="text-gray-600" data-lang="fa" style="display:none;">ایجاد سیستم‌های طراحی مقیاس‌پذیر و
-                            رابط‌های کاربری دلپذیر.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-3xl border what-i-do-card">
-                        <i class="fa fa-chart-line text-3xl text-gray-400 mb-6 new-icon"></i>
-                        <h3 class="font-semibold text-xl mb-2" data-lang="en">Fintech &amp; Tokenisation</h3>
-                        <h3 class="font-semibold text-xl mb-2" data-lang="fa" style="display:none;">فین‌تک و توکن‌سازی
-                        </h3>
-                        <p class="text-gray-600" data-lang="en">Designing financial platforms, dashboards, and RWA
-                            solutions.</p>
-                        <p class="text-gray-600" data-lang="fa" style="display:none;">طراحی پلتفرم‌های مالی، داشبوردها و
-                            راهکارهای RWA.</p>
-                    </div>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6 project-grid">
-                    <div class="bg-white p-8 rounded-3xl border what-i-do-card">
-                        <i class="fa fa-users text-3xl text-gray-400 mb-6 new-icon"></i>
-                        <h3 class="font-semibold text-xl mb-2" data-lang="en">User Research &amp; Strategy</h3>
-                        <h3 class="font-semibold text-xl mb-2" data-lang="fa" style="display:none;">تحقیق کاربر و
-                            استراتژی</h3>
-                        <p class="text-gray-600" data-lang="en">Deep user research, journey mapping, and product
-                            strategy.</p>
-                        <p class="text-gray-600" data-lang="fa" style="display:none;">تحقیق عمیق کاربر، نقشه‌برداری سفر
-                            و
-                            استراتژی محصول.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-3xl border what-i-do-card">
-                        <i class="fa fa-lightbulb text-3xl text-gray-400 mb-6 new-icon"></i>
-                        <h3 class="font-semibold text-xl mb-2" data-lang="en">Branding &amp; Visual Identity</h3>
-                        <h3 class="font-semibold text-xl mb-2" data-lang="fa" style="display:none;">برندسازی و هویت بصری
-                        </h3>
-                        <p class="text-gray-600" data-lang="en">Crafting premium visual identities for fintech and tech
-                            brands.</p>
-                        <p class="text-gray-600" data-lang="fa" style="display:none;">ساخت هویت‌های بصری ممتاز برای
-                            برندهای فین‌تک و فناوری.</p>
-                    </div>
-                </div>
-            </div>
+    <section
+      id="what-i-do"
+      class="section max-w-screen-2xl mx-auto px-8 py-20 bg-gray-50 rounded-3xl"
+    >
+      <div class="max-w-screen">
+        <div
+          class="uppercase tracking-[3px] text-xs font-medium text-gray-500 mb-4"
+          data-lang="en"
+        >
+          EXPERTISE
         </div>
+        <div
+          class="uppercase tracking-[3px] text-xs font-medium text-gray-500 mb-4"
+          data-lang="fa"
+          style="display: none"
+        >
+          تخصص‌ها
+        </div>
+        <h2 class="text-5xl font-semibold tracking-tighter mb-12">
+          <span data-lang="en">What I do</span>
+          <span data-lang="fa" style="display: none"
+            >چه کارهایی انجام می‌دهم</span
+          >
+        </h2>
+
+        <div class="grid gap-6 project-grid">
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 project-grid">
+            <div class="bg-white p-8 rounded-3xl border what-i-do-card">
+              <i class="fa fa-palette text-3xl text-gray-400 mb-6 new-icon"></i>
+              <h3 class="font-semibold text-xl mb-2" data-lang="en">
+                Product Design
+              </h3>
+              <h3
+                class="font-semibold text-xl mb-2"
+                data-lang="fa"
+                style="display: none"
+              >
+                طراحی محصول
+              </h3>
+              <p class="text-gray-600" data-lang="en">
+                End-to-end design of complex digital products and platforms.
+              </p>
+              <p class="text-gray-600" data-lang="fa" style="display: none">
+                طراحی سرتاسری محصولات و پلتفرم‌های دیجیتال پیچیده.
+              </p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border what-i-do-card">
+              <i
+                class="fa fa-layer-group text-3xl text-gray-400 mb-6 new-icon"
+              ></i>
+              <h3 class="font-semibold text-xl mb-2" data-lang="en">
+                UX/UI &amp; Design Systems
+              </h3>
+              <h3
+                class="font-semibold text-xl mb-2"
+                data-lang="fa"
+                style="display: none"
+              >
+                تجربه/رابط کاربری و سیستم‌های طراحی
+              </h3>
+              <p class="text-gray-600" data-lang="en">
+                Creating scalable design systems and delightful user interfaces.
+              </p>
+              <p class="text-gray-600" data-lang="fa" style="display: none">
+                ایجاد سیستم‌های طراحی مقیاس‌پذیر و رابط‌های کاربری دلپذیر.
+              </p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border what-i-do-card">
+              <i
+                class="fa fa-chart-line text-3xl text-gray-400 mb-6 new-icon"
+              ></i>
+              <h3 class="font-semibold text-xl mb-2" data-lang="en">
+                Fintech &amp; Tokenisation
+              </h3>
+              <h3
+                class="font-semibold text-xl mb-2"
+                data-lang="fa"
+                style="display: none"
+              >
+                فین‌تک و توکن‌سازی
+              </h3>
+              <p class="text-gray-600" data-lang="en">
+                Designing financial platforms, dashboards, and RWA solutions.
+              </p>
+              <p class="text-gray-600" data-lang="fa" style="display: none">
+                طراحی پلتفرم‌های مالی، داشبوردها و راهکارهای RWA.
+              </p>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6 project-grid">
+            <div class="bg-white p-8 rounded-3xl border what-i-do-card">
+              <i class="fa fa-users text-3xl text-gray-400 mb-6 new-icon"></i>
+              <h3 class="font-semibold text-xl mb-2" data-lang="en">
+                User Research &amp; Strategy
+              </h3>
+              <h3
+                class="font-semibold text-xl mb-2"
+                data-lang="fa"
+                style="display: none"
+              >
+                تحقیق کاربر و استراتژی
+              </h3>
+              <p class="text-gray-600" data-lang="en">
+                Deep user research, journey mapping, and product strategy.
+              </p>
+              <p class="text-gray-600" data-lang="fa" style="display: none">
+                تحقیق عمیق کاربر، نقشه‌برداری سفر و استراتژی محصول.
+              </p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border what-i-do-card">
+              <i
+                class="fa fa-lightbulb text-3xl text-gray-400 mb-6 new-icon"
+              ></i>
+              <h3 class="font-semibold text-xl mb-2" data-lang="en">
+                Branding &amp; Visual Identity
+              </h3>
+              <h3
+                class="font-semibold text-xl mb-2"
+                data-lang="fa"
+                style="display: none"
+              >
+                برندسازی و هویت بصری
+              </h3>
+              <p class="text-gray-600" data-lang="en">
+                Crafting premium visual identities for fintech and tech brands.
+              </p>
+              <p class="text-gray-600" data-lang="fa" style="display: none">
+                ساخت هویت‌های بصری ممتاز برای برندهای فین‌تک و فناوری.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- My Process -->
     <section id="process" class="section max-w-screen-2xl mx-auto px-8 py-20">
-        <div class="max-w-4xl mx-auto text-center mb-12">
-            <div class="uppercase tracking-[3px] text-xs font-medium text-gray-500 mb-4" data-lang="en">METHODOLOGY
-            </div>
-            <div class="uppercase tracking-[3px] text-xs font-medium text-gray-500 mb-4" data-lang="fa"
-                style="display:none;">متدولوژی</div>
-            <h2 class="text-5xl font-semibold tracking-tighter">
-                <span data-lang="en">My Process</span>
-                <span data-lang="fa" style="display:none;">فرآیند من</span>
-            </h2>
+      <div class="max-w-4xl mx-auto text-center mb-12">
+        <div
+          class="uppercase tracking-[3px] text-xs font-medium text-gray-500 mb-4"
+          data-lang="en"
+        >
+          METHODOLOGY
         </div>
+        <div
+          class="uppercase tracking-[3px] text-xs font-medium text-gray-500 mb-4"
+          data-lang="fa"
+          style="display: none"
+        >
+          متدولوژی
+        </div>
+        <h2 class="text-5xl font-semibold tracking-tighter">
+          <span data-lang="en">My Process</span>
+          <span data-lang="fa" style="display: none">فرآیند من</span>
+        </h2>
+      </div>
 
-        <div class="max-w-screen mx-auto grid md:grid-cols-5 gap-4">
-            <div class="process-step bg-white border p-8 rounded-3xl work-card">
-                <div class="font-mono text-2xl text-gray-400 mb-3">01</div>
-                <h4 class="font-semibold mb-2" data-lang="en">Discover</h4>
-                <h4 class="font-semibold mb-2" data-lang="fa" style="display:none;">کشف</h4>
-                <p class="text-sm text-gray-600" data-lang="en">Research, stakeholder interviews, and market analysis.
-                </p>
-                <p class="text-sm text-gray-600" data-lang="fa" style="display:none;">تحقیق، مصاحبه با ذی‌نفعان و تحلیل
-                    بازار.</p>
-            </div>
-            <div class="process-step bg-white border p-8 rounded-3xl work-card">
-                <div class="font-mono text-2xl text-gray-400 mb-3">02</div>
-                <h4 class="font-semibold mb-2" data-lang="en">Define</h4>
-                <h4 class="font-semibold mb-2" data-lang="fa" style="display:none;">تعریف</h4>
-                <p class="text-sm text-gray-600" data-lang="en">Problem framing, user personas, and product strategy.
-                </p>
-                <p class="text-sm text-gray-600" data-lang="fa" style="display:none;">چارچوب‌بندی مسئله، پرسوناهای
-                    کاربری و استراتژی محصول.</p>
-            </div>
-            <div class="process-step bg-white border p-8 rounded-3xl work-card">
-                <div class="font-mono text-2xl text-gray-400 mb-3">03</div>
-                <h4 class="font-semibold mb-2" data-lang="en">Design</h4>
-                <h4 class="font-semibold mb-2" data-lang="fa" style="display:none;">طراحی</h4>
-                <p class="text-sm text-gray-600" data-lang="en">Wireframing, high-fidelity design, and prototyping.</p>
-                <p class="text-sm text-gray-600" data-lang="fa" style="display:none;">وایرفریم، طراحی با وفاداری بالا و
-                    نمونه‌سازی.</p>
-            </div>
-            <div class="process-step bg-white border p-8 rounded-3xl work-card">
-                <div class="font-mono text-2xl text-gray-400 mb-3">04</div>
-                <h4 class="font-semibold mb-2" data-lang="en">Validate</h4>
-                <h4 class="font-semibold mb-2" data-lang="fa" style="display:none;">اعتبارسنجی</h4>
-                <p class="text-sm text-gray-600" data-lang="en">Usability testing, feedback loops, and iteration.</p>
-                <p class="text-sm text-gray-600" data-lang="fa" style="display:none;">تست کاربردپذیری، حلقه‌های بازخورد
-                    و تکرار.</p>
-            </div>
-            <div class="process-step bg-white border p-8 rounded-3xl work-card">
-                <div class="font-mono text-2xl text-gray-400 mb-3">05</div>
-                <h4 class="font-semibold mb-2" data-lang="en">Evolve</h4>
-                <h4 class="font-semibold mb-2" data-lang="fa" style="display:none;">تکامل</h4>
-                <p class="text-sm text-gray-600" data-lang="en">Launch support, measurement, and continuous improvement.
-                </p>
-                <p class="text-sm text-gray-600" data-lang="fa" style="display:none;">پشتیبانی از عرضه، اندازه‌گیری و
-                    بهبود مستمر.</p>
-            </div>
+      <div class="max-w-screen mx-auto grid md:grid-cols-5 gap-4">
+        <div class="process-step bg-white border p-8 rounded-3xl work-card">
+          <div class="font-mono text-2xl text-gray-400 mb-3">01</div>
+          <h4 class="font-semibold mb-2" data-lang="en">Discover</h4>
+          <h4 class="font-semibold mb-2" data-lang="fa" style="display: none">
+            کشف
+          </h4>
+          <p class="text-sm text-gray-600" data-lang="en">
+            Research, stakeholder interviews, and market analysis.
+          </p>
+          <p class="text-sm text-gray-600" data-lang="fa" style="display: none">
+            تحقیق، مصاحبه با ذی‌نفعان و تحلیل بازار.
+          </p>
         </div>
+        <div class="process-step bg-white border p-8 rounded-3xl work-card">
+          <div class="font-mono text-2xl text-gray-400 mb-3">02</div>
+          <h4 class="font-semibold mb-2" data-lang="en">Define</h4>
+          <h4 class="font-semibold mb-2" data-lang="fa" style="display: none">
+            تعریف
+          </h4>
+          <p class="text-sm text-gray-600" data-lang="en">
+            Problem framing, user personas, and product strategy.
+          </p>
+          <p class="text-sm text-gray-600" data-lang="fa" style="display: none">
+            چارچوب‌بندی مسئله، پرسوناهای کاربری و استراتژی محصول.
+          </p>
+        </div>
+        <div class="process-step bg-white border p-8 rounded-3xl work-card">
+          <div class="font-mono text-2xl text-gray-400 mb-3">03</div>
+          <h4 class="font-semibold mb-2" data-lang="en">Design</h4>
+          <h4 class="font-semibold mb-2" data-lang="fa" style="display: none">
+            طراحی
+          </h4>
+          <p class="text-sm text-gray-600" data-lang="en">
+            Wireframing, high-fidelity design, and prototyping.
+          </p>
+          <p class="text-sm text-gray-600" data-lang="fa" style="display: none">
+            وایرفریم، طراحی با وفاداری بالا و نمونه‌سازی.
+          </p>
+        </div>
+        <div class="process-step bg-white border p-8 rounded-3xl work-card">
+          <div class="font-mono text-2xl text-gray-400 mb-3">04</div>
+          <h4 class="font-semibold mb-2" data-lang="en">Validate</h4>
+          <h4 class="font-semibold mb-2" data-lang="fa" style="display: none">
+            اعتبارسنجی
+          </h4>
+          <p class="text-sm text-gray-600" data-lang="en">
+            Usability testing, feedback loops, and iteration.
+          </p>
+          <p class="text-sm text-gray-600" data-lang="fa" style="display: none">
+            تست کاربردپذیری، حلقه‌های بازخورد و تکرار.
+          </p>
+        </div>
+        <div class="process-step bg-white border p-8 rounded-3xl work-card">
+          <div class="font-mono text-2xl text-gray-400 mb-3">05</div>
+          <h4 class="font-semibold mb-2" data-lang="en">Evolve</h4>
+          <h4 class="font-semibold mb-2" data-lang="fa" style="display: none">
+            تکامل
+          </h4>
+          <p class="text-sm text-gray-600" data-lang="en">
+            Launch support, measurement, and continuous improvement.
+          </p>
+          <p class="text-sm text-gray-600" data-lang="fa" style="display: none">
+            پشتیبانی از عرضه، اندازه‌گیری و بهبود مستمر.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- Selected Work -->
-    <section id="work" class="section max-w-screen-2xl mx-auto px-8 py-20 bg-gray-950 text-white rounded-3xl">
-        <div class="max-w-screen">
-            <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-y-4">
-                <div>
-                    <div class="uppercase tracking-[3px] text-xs font-medium text-gray-400 mb-3" data-lang="en">SELECTED
-                        WORK</div>
-                    <div class="uppercase tracking-[3px] text-xs font-medium text-gray-400 mb-3" data-lang="fa"
-                        style="display:none;">نمونه‌کارهای منتخب</div>
-                    <h2 class="text-5xl font-semibold tracking-tighter">
-                        <span data-lang="en">Featured projects</span>
-                        <span data-lang="fa" style="display:none;">پروژه‌های شاخص</span>
-                    </h2>
-                </div>
-
-                <div class="flex flex-wrap gap-3">
-                    <a href="./Assets/cv-khatibi.pdf" rel="noopener noreferrer"
-                        class="px-6 py-3 bg-white text-gray-900 rounded-full text-sm font-medium flex items-center gap-x-2 hover:bg-gray-100 transition-all btn-primary">
-                        <i class="fa fa-download"></i>
-                        <span data-lang="en">Download Resume</span>
-                        <span data-lang="fa" style="display:none;">دانلود رزومه</span>
-                    </a>
-                </div>
+    <section
+      id="work"
+      class="section max-w-screen-2xl mx-auto px-8 py-20 bg-gray-950 text-white rounded-3xl"
+    >
+      <div class="max-w-screen">
+        <div
+          class="flex flex-col md:flex-row md:items-end md:justify-between mb-12 gap-y-4"
+        >
+          <div>
+            <div
+              class="uppercase tracking-[3px] text-xs font-medium text-gray-400 mb-3"
+              data-lang="en"
+            >
+              SELECTED WORK
             </div>
-
-            <div class="grid gap-6 project-grid">
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 project-grid">
-                    <!-- Project cards -->
-                    <div class="work-card bg-gray-900 rounded-3xl p-8 border border-gray-800">
-                        <i class="fa fa-mobile-alt text-3xl text-gray-400 mb-6 modern-icon"></i>
-                        <div class="font-semibold text-xl mb-1" data-lang="en">Hamrah-e Aval (MCI)</div>
-                        <div class="font-semibold text-xl mb-1" data-lang="fa" style="display:none;">همراه اول</div>
-                        <div class="text-gray-400 text-sm mb-4" data-lang="en">Credit &amp; Loyalty Platform</div>
-                        <div class="text-gray-400 text-sm mb-4" data-lang="fa" style="display:none;">پلتفرم اعتباری و
-                            وفاداری</div>
-                        <p class="text-gray-300 text-[15px]" data-lang="en">Mobile credit and loyalty platform for
-                            Iran’s
-                            largest telecom operator.</p>
-                        <p class="text-gray-300 text-[15px]" data-lang="fa" style="display:none;">پلتفرم اعتباری و
-                            وفاداری موبایل برای بزرگترین اپراتور مخابراتی ایران.</p>
-                    </div>
-
-                    <div class="work-card bg-gray-900 rounded-3xl p-8 border border-gray-800">
-                        <i class="fa fa-wallet text-3xl text-gray-400 mb-6 modern-icon"></i>
-                        <div class="font-semibold text-xl mb-1" data-lang="en">Ewano</div>
-                        <div class="font-semibold text-xl mb-1" data-lang="fa" style="display:none;">اوانو</div>
-                        <div class="text-gray-400 text-sm mb-4" data-lang="en">Credit &amp; Loyalty Platform • Hamrah-e
-                            Aval</div>
-                        <div class="text-gray-400 text-sm mb-4" data-lang="fa" style="display:none;">پلتفرم اعتباری و
-                            وفاداری • همراه اول</div>
-                        <p class="text-gray-300 text-[15px]" data-lang="en">Mobile credit and loyalty platform for
-                            Iran’s
-                            largest telecom operator.</p>
-                        <p class="text-gray-300 text-[15px]" data-lang="fa" style="display:none;">پلتفرم اعتباری و
-                            وفاداری موبایل برای بزرگترین اپراتور مخابراتی ایران.</p>
-                    </div>
-
-                    <div class="work-card bg-gray-900 rounded-3xl p-8 border border-gray-800">
-                        <i class="fa fa-chart-line text-3xl text-gray-400 mb-6 modern-icon"></i>
-                        <div class="font-semibold text-xl mb-1" data-lang="en">Farabi Brokerage</div>
-                        <div class="font-semibold text-xl mb-1" data-lang="fa" style="display:none;">کارگزاری فارابی
-                        </div>
-                        <div class="text-gray-400 text-sm mb-4" data-lang="en">Portfolio Dashboard</div>
-                        <div class="text-gray-400 text-sm mb-4" data-lang="fa" style="display:none;">داشبورد پرتفوی
-                        </div>
-                        <p class="text-gray-300 text-[15px]" data-lang="en">Advanced portfolio analytics and trading
-                            dashboard with 30% increase in engagement.</p>
-                        <p class="text-gray-300 text-[15px]" data-lang="fa" style="display:none;">تحلیل‌های پیشرفته
-                            پرتفوی و داشبورد معاملاتی با ۳۰٪ افزایش تعامل.</p>
-                    </div>
-
-                    <div class="work-card bg-gray-900 rounded-3xl p-8 border border-gray-800">
-                        <i class="fa fa-exchange-alt text-3xl text-gray-400 mb-6 modern-icon"></i>
-                        <div class="font-semibold text-xl mb-1" data-lang="en">Rabin Brokerage</div>
-                        <div class="font-semibold text-xl mb-1" data-lang="fa" style="display:none;">کارگزاری رابین
-                        </div>
-                        <div class="text-gray-400 text-sm mb-4" data-lang="en">Trading Platform &amp; Robin Pay</div>
-                        <div class="text-gray-400 text-sm mb-4" data-lang="fa" style="display:none;">پلتفرم معاملاتی و
-                            رابین پی</div>
-                        <p class="text-gray-300 text-[15px]" data-lang="en">Full trading suite and Iran’s first instant
-                            stock-market payment gateway.</p>
-                        <p class="text-gray-300 text-[15px]" data-lang="fa" style="display:none;">مجموعه کامل معاملاتی و
-                            اولین درگاه پرداخت لحظه‌ای بورس ایران.</p>
-                    </div>
-
-                    <div class="work-card bg-gray-900 rounded-3xl p-8 border border-gray-800">
-                        <i class="fa fa-globe text-3xl text-gray-400 mb-6 modern-icon"></i>
-                        <div class="font-semibold text-xl mb-1" data-lang="en">Sahamyab</div>
-                        <div class="font-semibold text-xl mb-1" data-lang="fa" style="display:none;">سهامیاب</div>
-                        <div class="text-gray-400 text-sm mb-4" data-lang="en">Stock Market Social Network</div>
-                        <div class="text-gray-400 text-sm mb-4" data-lang="fa" style="display:none;">شبکه اجتماعی بورس
-                        </div>
-                        <p class="text-gray-300 text-[15px]" data-lang="en">Responsive redesign and educational platform
-                            for Iran’s largest stock market community.</p>
-                        <p class="text-gray-300 text-[15px]" data-lang="fa" style="display:none;">بازطراحی واکنش‌گرا و
-                            پلتفرم آموزشی برای بزرگترین جامعه بورسی ایران.</p>
-                    </div>
-
-                    <div class="work-card bg-gray-900 rounded-3xl p-8 border border-gray-800">
-                        <i class="fa fa-robot text-3xl text-gray-400 mb-6 modern-icon"></i>
-                        <div class="font-semibold text-xl mb-1" data-lang="en">Omid Plus</div>
-                        <div class="font-semibold text-xl mb-1" data-lang="fa" style="display:none;">امید پلاس</div>
-                        <div class="text-gray-400 text-sm mb-4" data-lang="en">Algorithmic Trading Platform</div>
-                        <div class="text-gray-400 text-sm mb-4" data-lang="fa" style="display:none;">پلتفرم معاملات
-                            الگوریتمی</div>
-                        <p class="text-gray-300 text-[15px]" data-lang="en">Intelligent stock trading platform that
-                            increased daily transactions and website visitors by 30%.</p>
-                        <p class="text-gray-300 text-[15px]" data-lang="fa" style="display:none;">پلتفرم هوشمند معاملات
-                            سهام که تراکنش‌های روزانه و بازدیدکنندگان وب‌سایت را ۳۰٪ افزایش داد.</p>
-                    </div>
-
-                    <div class="work-card bg-gray-900 rounded-3xl p-8 border border-gray-800">
-                        <i class="fa fa-building text-3xl text-gray-400 mb-6 modern-icon"></i>
-                        <div class="font-semibold text-xl mb-1" data-lang="en">Soshyant</div>
-                        <div class="font-semibold text-xl mb-1" data-lang="fa" style="display:none;">سوشیانت</div>
-                        <div class="text-gray-400 text-sm mb-4" data-lang="en">Financial Technology</div>
-                        <div class="text-gray-400 text-sm mb-4" data-lang="fa" style="display:none;">فناوری مالی</div>
-                        <p class="text-gray-300 text-[15px]" data-lang="en">First dedicated stock-trading platform built
-                            to global standards.</p>
-                        <p class="text-gray-300 text-[15px]" data-lang="fa" style="display:none;">اولین پلتفرم اختصاصی
-                            معاملات سهام ساخته‌شده بر اساس استانداردهای جهانی.</p>
-                    </div>
-
-                    <div class="work-card bg-gray-900 rounded-3xl p-8 border border-gray-800">
-                        <i class="fa fa-coins text-3xl text-gray-400 mb-6 modern-icon"></i>
-                        <div class="font-semibold text-xl mb-1" data-lang="en">Mazdax</div>
-                        <div class="font-semibold text-xl mb-1" data-lang="fa" style="display:none;">مزدکس</div>
-                        <div class="text-gray-400 text-sm mb-4" data-lang="en">RWA &amp; Tokenisation Platform</div>
-                        <div class="text-gray-400 text-sm mb-4" data-lang="fa" style="display:none;">پلتفرم RWA و
-                            توکن‌سازی</div>
-                        <p class="text-gray-300 text-[15px]" data-lang="en">Cryptocurrency exchange and real-world asset
-                            tokenisation infrastructure.</p>
-                        <p class="text-gray-300 text-[15px]" data-lang="fa" style="display:none;">صرافی ارز دیجیتال و
-                            زیرساخت توکن‌سازی دارایی‌های دنیای واقعی.</p>
-                    </div>
-
-                    <div class="work-card bg-gray-900 rounded-3xl p-8 border border-gray-800">
-                        <i class="fa fa-map-marked-alt text-3xl text-gray-400 mb-6 modern-icon"></i>
-                        <div class="font-semibold text-xl mb-1" data-lang="en">Chista</div>
-                        <div class="font-semibold text-xl mb-1" data-lang="fa" style="display:none;">چیستا</div>
-                        <div class="text-gray-400 text-sm mb-4" data-lang="en">National Map Viewer &amp; Transportation
-                        </div>
-                        <div class="text-gray-400 text-sm mb-4" data-lang="fa" style="display:none;">سامانه نقشه ملی و
-                            حمل‌ونقل</div>
-                        <p class="text-gray-300 text-[15px]" data-lang="en">Comprehensive electronic map of Iran and
-                            passenger transportation platform.</p>
-                        <p class="text-gray-300 text-[15px]" data-lang="fa" style="display:none;">نقشه الکترونیکی جامع
-                            ایران و پلتفرم حمل‌ونقل مسافر.</p>
-                    </div>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6 project-grid">
-                    <div class="work-card bg-gray-900 rounded-3xl p-8 border border-gray-800">
-                        <i class="fa fa-industry text-3xl text-gray-400 mb-6 modern-icon"></i>
-                        <div class="font-semibold text-xl mb-1" data-lang="en">Golrang</div>
-                        <div class="font-semibold text-xl mb-1" data-lang="fa" style="display:none;">گلرنگ</div>
-                        <div class="text-gray-400 text-sm mb-4" data-lang="en">E-commerce &amp; Digital Products</div>
-                        <div class="text-gray-400 text-sm mb-4" data-lang="fa" style="display:none;">تجارت الکترونیک و
-                            محصولات دیجیتال</div>
-                        <p class="text-gray-300 text-[15px]" data-lang="en">Digital product design for one of Iran’s
-                            largest conglomerates.</p>
-                        <p class="text-gray-300 text-[15px]" data-lang="fa" style="display:none;">طراحی محصول دیجیتال
-                            برای یکی از بزرگترین هلدینگ‌های ایران.</p>
-                    </div>
-
-                    <div class="work-card bg-gray-900 rounded-3xl p-8 border border-gray-800">
-                        <i class="fa fa-handshake text-3xl text-gray-400 mb-6 modern-icon"></i>
-                        <div class="font-semibold text-xl mb-1" data-lang="en">Modaber Asia Brokerage</div>
-                        <div class="font-semibold text-xl mb-1" data-lang="fa" style="display:none;">کارگزاری مدبر آسیا
-                        </div>
-                        <div class="text-gray-400 text-sm mb-4" data-lang="en">Brokerage Platform</div>
-                        <div class="text-gray-400 text-sm mb-4" data-lang="fa" style="display:none;">پلتفرم کارگزاری
-                        </div>
-                        <p class="text-gray-300 text-[15px]" data-lang="en">Online trading and portfolio management
-                            solutions for brokerage services.</p>
-                        <p class="text-gray-300 text-[15px]" data-lang="fa" style="display:none;">راهکارهای معاملات
-                            آنلاین و مدیریت پرتفوی برای خدمات کارگزاری.</p>
-                    </div>
-                </div>
+            <div
+              class="uppercase tracking-[3px] text-xs font-medium text-gray-400 mb-3"
+              data-lang="fa"
+              style="display: none"
+            >
+              نمونه‌کارهای منتخب
             </div>
+            <h2 class="text-5xl font-semibold tracking-tighter">
+              <span data-lang="en">Featured projects</span>
+              <span data-lang="fa" style="display: none">پروژه‌های شاخص</span>
+            </h2>
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="./Assets/Resume.pdf"
+              rel="noopener noreferrer"
+              class="px-6 py-3 bg-white text-gray-900 rounded-full text-sm font-medium flex items-center gap-x-2 hover:bg-gray-100 transition-all btn-primary"
+            >
+              <i class="fa fa-download"></i>
+              <span data-lang="en">Download Resume</span>
+              <span data-lang="fa" style="display: none">دانلود رزومه</span>
+            </a>
+          </div>
         </div>
+
+        <div class="grid gap-6 project-grid">
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 project-grid">
+            <!-- Project cards -->
+            <div
+              class="work-card bg-gray-900 rounded-3xl p-8 border border-gray-800"
+            >
+              <i
+                class="fa fa-mobile-alt text-3xl text-gray-400 mb-6 modern-icon"
+              ></i>
+              <div class="font-semibold text-xl mb-1" data-lang="en">
+                Hamrah-e Aval (MCI)
+              </div>
+              <div
+                class="font-semibold text-xl mb-1"
+                data-lang="fa"
+                style="display: none"
+              >
+                همراه اول
+              </div>
+              <div class="text-gray-400 text-sm mb-4" data-lang="en">
+                Credit &amp; Loyalty Platform
+              </div>
+              <div
+                class="text-gray-400 text-sm mb-4"
+                data-lang="fa"
+                style="display: none"
+              >
+                پلتفرم اعتباری و وفاداری
+              </div>
+              <p class="text-gray-300 text-[15px]" data-lang="en">
+                Mobile credit and loyalty platform for Iran’s largest telecom
+                operator.
+              </p>
+              <p
+                class="text-gray-300 text-[15px]"
+                data-lang="fa"
+                style="display: none"
+              >
+                پلتفرم اعتباری و وفاداری موبایل برای بزرگترین اپراتور مخابراتی
+                ایران.
+              </p>
+            </div>
+
+            <div
+              class="work-card bg-gray-900 rounded-3xl p-8 border border-gray-800"
+            >
+              <i
+                class="fa fa-wallet text-3xl text-gray-400 mb-6 modern-icon"
+              ></i>
+              <div class="font-semibold text-xl mb-1" data-lang="en">Ewano</div>
+              <div
+                class="font-semibold text-xl mb-1"
+                data-lang="fa"
+                style="display: none"
+              >
+                اوانو
+              </div>
+              <div class="text-gray-400 text-sm mb-4" data-lang="en">
+                Credit &amp; Loyalty Platform • Hamrah-e Aval
+              </div>
+              <div
+                class="text-gray-400 text-sm mb-4"
+                data-lang="fa"
+                style="display: none"
+              >
+                پلتفرم اعتباری و وفاداری • همراه اول
+              </div>
+              <p class="text-gray-300 text-[15px]" data-lang="en">
+                Mobile credit and loyalty platform for Iran’s largest telecom
+                operator.
+              </p>
+              <p
+                class="text-gray-300 text-[15px]"
+                data-lang="fa"
+                style="display: none"
+              >
+                پلتفرم اعتباری و وفاداری موبایل برای بزرگترین اپراتور مخابراتی
+                ایران.
+              </p>
+            </div>
+
+            <div
+              class="work-card bg-gray-900 rounded-3xl p-8 border border-gray-800"
+            >
+              <i
+                class="fa fa-chart-line text-3xl text-gray-400 mb-6 modern-icon"
+              ></i>
+              <div class="font-semibold text-xl mb-1" data-lang="en">
+                Farabi Brokerage
+              </div>
+              <div
+                class="font-semibold text-xl mb-1"
+                data-lang="fa"
+                style="display: none"
+              >
+                کارگزاری فارابی
+              </div>
+              <div class="text-gray-400 text-sm mb-4" data-lang="en">
+                Portfolio Dashboard
+              </div>
+              <div
+                class="text-gray-400 text-sm mb-4"
+                data-lang="fa"
+                style="display: none"
+              >
+                داشبورد پرتفوی
+              </div>
+              <p class="text-gray-300 text-[15px]" data-lang="en">
+                Advanced portfolio analytics and trading dashboard with 30%
+                increase in engagement.
+              </p>
+              <p
+                class="text-gray-300 text-[15px]"
+                data-lang="fa"
+                style="display: none"
+              >
+                تحلیل‌های پیشرفته پرتفوی و داشبورد معاملاتی با ۳۰٪ افزایش تعامل.
+              </p>
+            </div>
+
+            <div
+              class="work-card bg-gray-900 rounded-3xl p-8 border border-gray-800"
+            >
+              <i
+                class="fa fa-exchange-alt text-3xl text-gray-400 mb-6 modern-icon"
+              ></i>
+              <div class="font-semibold text-xl mb-1" data-lang="en">
+                Rabin Brokerage
+              </div>
+              <div
+                class="font-semibold text-xl mb-1"
+                data-lang="fa"
+                style="display: none"
+              >
+                کارگزاری رابین
+              </div>
+              <div class="text-gray-400 text-sm mb-4" data-lang="en">
+                Trading Platform &amp; Robin Pay
+              </div>
+              <div
+                class="text-gray-400 text-sm mb-4"
+                data-lang="fa"
+                style="display: none"
+              >
+                پلتفرم معاملاتی و رابین پی
+              </div>
+              <p class="text-gray-300 text-[15px]" data-lang="en">
+                Full trading suite and Iran’s first instant stock-market payment
+                gateway.
+              </p>
+              <p
+                class="text-gray-300 text-[15px]"
+                data-lang="fa"
+                style="display: none"
+              >
+                مجموعه کامل معاملاتی و اولین درگاه پرداخت لحظه‌ای بورس ایران.
+              </p>
+            </div>
+
+            <div
+              class="work-card bg-gray-900 rounded-3xl p-8 border border-gray-800"
+            >
+              <i
+                class="fa fa-globe text-3xl text-gray-400 mb-6 modern-icon"
+              ></i>
+              <div class="font-semibold text-xl mb-1" data-lang="en">
+                Sahamyab
+              </div>
+              <div
+                class="font-semibold text-xl mb-1"
+                data-lang="fa"
+                style="display: none"
+              >
+                سهامیاب
+              </div>
+              <div class="text-gray-400 text-sm mb-4" data-lang="en">
+                Stock Market Social Network
+              </div>
+              <div
+                class="text-gray-400 text-sm mb-4"
+                data-lang="fa"
+                style="display: none"
+              >
+                شبکه اجتماعی بورس
+              </div>
+              <p class="text-gray-300 text-[15px]" data-lang="en">
+                Responsive redesign and educational platform for Iran’s largest
+                stock market community.
+              </p>
+              <p
+                class="text-gray-300 text-[15px]"
+                data-lang="fa"
+                style="display: none"
+              >
+                بازطراحی واکنش‌گرا و پلتفرم آموزشی برای بزرگترین جامعه بورسی
+                ایران.
+              </p>
+            </div>
+
+            <div
+              class="work-card bg-gray-900 rounded-3xl p-8 border border-gray-800"
+            >
+              <i
+                class="fa fa-robot text-3xl text-gray-400 mb-6 modern-icon"
+              ></i>
+              <div class="font-semibold text-xl mb-1" data-lang="en">
+                Omid Plus
+              </div>
+              <div
+                class="font-semibold text-xl mb-1"
+                data-lang="fa"
+                style="display: none"
+              >
+                امید پلاس
+              </div>
+              <div class="text-gray-400 text-sm mb-4" data-lang="en">
+                Algorithmic Trading Platform
+              </div>
+              <div
+                class="text-gray-400 text-sm mb-4"
+                data-lang="fa"
+                style="display: none"
+              >
+                پلتفرم معاملات الگوریتمی
+              </div>
+              <p class="text-gray-300 text-[15px]" data-lang="en">
+                Intelligent stock trading platform that increased daily
+                transactions and website visitors by 30%.
+              </p>
+              <p
+                class="text-gray-300 text-[15px]"
+                data-lang="fa"
+                style="display: none"
+              >
+                پلتفرم هوشمند معاملات سهام که تراکنش‌های روزانه و بازدیدکنندگان
+                وب‌سایت را ۳۰٪ افزایش داد.
+              </p>
+            </div>
+
+            <div
+              class="work-card bg-gray-900 rounded-3xl p-8 border border-gray-800"
+            >
+              <i
+                class="fa fa-building text-3xl text-gray-400 mb-6 modern-icon"
+              ></i>
+              <div class="font-semibold text-xl mb-1" data-lang="en">
+                Soshyant
+              </div>
+              <div
+                class="font-semibold text-xl mb-1"
+                data-lang="fa"
+                style="display: none"
+              >
+                سوشیانت
+              </div>
+              <div class="text-gray-400 text-sm mb-4" data-lang="en">
+                Financial Technology
+              </div>
+              <div
+                class="text-gray-400 text-sm mb-4"
+                data-lang="fa"
+                style="display: none"
+              >
+                فناوری مالی
+              </div>
+              <p class="text-gray-300 text-[15px]" data-lang="en">
+                First dedicated stock-trading platform built to global
+                standards.
+              </p>
+              <p
+                class="text-gray-300 text-[15px]"
+                data-lang="fa"
+                style="display: none"
+              >
+                اولین پلتفرم اختصاصی معاملات سهام ساخته‌شده بر اساس استانداردهای
+                جهانی.
+              </p>
+            </div>
+
+            <div
+              class="work-card bg-gray-900 rounded-3xl p-8 border border-gray-800"
+            >
+              <i
+                class="fa fa-coins text-3xl text-gray-400 mb-6 modern-icon"
+              ></i>
+              <div class="font-semibold text-xl mb-1" data-lang="en">
+                Mazdax
+              </div>
+              <div
+                class="font-semibold text-xl mb-1"
+                data-lang="fa"
+                style="display: none"
+              >
+                مزدکس
+              </div>
+              <div class="text-gray-400 text-sm mb-4" data-lang="en">
+                RWA &amp; Tokenisation Platform
+              </div>
+              <div
+                class="text-gray-400 text-sm mb-4"
+                data-lang="fa"
+                style="display: none"
+              >
+                پلتفرم RWA و توکن‌سازی
+              </div>
+              <p class="text-gray-300 text-[15px]" data-lang="en">
+                Cryptocurrency exchange and real-world asset tokenisation
+                infrastructure.
+              </p>
+              <p
+                class="text-gray-300 text-[15px]"
+                data-lang="fa"
+                style="display: none"
+              >
+                صرافی ارز دیجیتال و زیرساخت توکن‌سازی دارایی‌های دنیای واقعی.
+              </p>
+            </div>
+
+            <div
+              class="work-card bg-gray-900 rounded-3xl p-8 border border-gray-800"
+            >
+              <i
+                class="fa fa-map-marked-alt text-3xl text-gray-400 mb-6 modern-icon"
+              ></i>
+              <div class="font-semibold text-xl mb-1" data-lang="en">
+                Chista
+              </div>
+              <div
+                class="font-semibold text-xl mb-1"
+                data-lang="fa"
+                style="display: none"
+              >
+                چیستا
+              </div>
+              <div class="text-gray-400 text-sm mb-4" data-lang="en">
+                National Map Viewer &amp; Transportation
+              </div>
+              <div
+                class="text-gray-400 text-sm mb-4"
+                data-lang="fa"
+                style="display: none"
+              >
+                سامانه نقشه ملی و حمل‌ونقل
+              </div>
+              <p class="text-gray-300 text-[15px]" data-lang="en">
+                Comprehensive electronic map of Iran and passenger
+                transportation platform.
+              </p>
+              <p
+                class="text-gray-300 text-[15px]"
+                data-lang="fa"
+                style="display: none"
+              >
+                نقشه الکترونیکی جامع ایران و پلتفرم حمل‌ونقل مسافر.
+              </p>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-6 project-grid">
+            <div
+              class="work-card bg-gray-900 rounded-3xl p-8 border border-gray-800"
+            >
+              <i
+                class="fa fa-industry text-3xl text-gray-400 mb-6 modern-icon"
+              ></i>
+              <div class="font-semibold text-xl mb-1" data-lang="en">
+                Golrang
+              </div>
+              <div
+                class="font-semibold text-xl mb-1"
+                data-lang="fa"
+                style="display: none"
+              >
+                گلرنگ
+              </div>
+              <div class="text-gray-400 text-sm mb-4" data-lang="en">
+                E-commerce &amp; Digital Products
+              </div>
+              <div
+                class="text-gray-400 text-sm mb-4"
+                data-lang="fa"
+                style="display: none"
+              >
+                تجارت الکترونیک و محصولات دیجیتال
+              </div>
+              <p class="text-gray-300 text-[15px]" data-lang="en">
+                Digital product design for one of Iran’s largest conglomerates.
+              </p>
+              <p
+                class="text-gray-300 text-[15px]"
+                data-lang="fa"
+                style="display: none"
+              >
+                طراحی محصول دیجیتال برای یکی از بزرگترین هلدینگ‌های ایران.
+              </p>
+            </div>
+
+            <div
+              class="work-card bg-gray-900 rounded-3xl p-8 border border-gray-800"
+            >
+              <i
+                class="fa fa-handshake text-3xl text-gray-400 mb-6 modern-icon"
+              ></i>
+              <div class="font-semibold text-xl mb-1" data-lang="en">
+                Modaber Asia Brokerage
+              </div>
+              <div
+                class="font-semibold text-xl mb-1"
+                data-lang="fa"
+                style="display: none"
+              >
+                کارگزاری مدبر آسیا
+              </div>
+              <div class="text-gray-400 text-sm mb-4" data-lang="en">
+                Brokerage Platform
+              </div>
+              <div
+                class="text-gray-400 text-sm mb-4"
+                data-lang="fa"
+                style="display: none"
+              >
+                پلتفرم کارگزاری
+              </div>
+              <p class="text-gray-300 text-[15px]" data-lang="en">
+                Online trading and portfolio management solutions for brokerage
+                services.
+              </p>
+              <p
+                class="text-gray-300 text-[15px]"
+                data-lang="fa"
+                style="display: none"
+              >
+                راهکارهای معاملات آنلاین و مدیریت پرتفوی برای خدمات کارگزاری.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section max-w-screen-2xl mx-auto px-8 py-20 bg-gray-50 m-12 rounded-3xl">
-        <div class="max-w-xl mx-auto text-center">
-            <div class="uppercase tracking-[3px] text-xs font-medium text-gray-500 mb-4" data-lang="en">LET’S WORK
-                TOGETHER</div>
-            <div class="uppercase tracking-[3px] text-xs font-medium text-gray-500 mb-4" data-lang="fa"
-                style="display:none;">بیایید با هم کار کنیم</div>
-            <h2 class="text-5xl font-semibold tracking-tighter mb-6">
-                <span data-lang="en">Ready to build something exceptional?</span>
-                <span data-lang="fa" style="display:none;">آماده‌اید چیزی استثنایی بسازیم؟</span>
-            </h2>
-            <p class="text-gray-600 mb-10" data-lang="en">I’m currently taking on a limited number of new projects in
-                fintech and digital product design.</p>
-            <p class="text-gray-600 mb-10" data-lang="fa" style="display:none;">در حال حاضر تعداد محدودی پروژه جدید در
-                حوزه فین‌تک و طراحی محصول دیجیتال می‌پذیرم.</p>
-
-            <form class="space-y-4 text-left max-w-lg mx-auto">
-                <div class="grid grid-cols-2 gap-4">
-                    <input type="text" placeholder="First name"
-                        class="w-full px-6 py-4 border bg-white rounded-2xl focus:outline-none focus:ring-2 focus:ring-gray-900"
-                        data-placeholder-en="First name" data-placeholder-fa="نام">
-                    <input type="text" placeholder="Last name"
-                        class="w-full px-6 py-4 border bg-white rounded-2xl focus:outline-none focus:ring-2 focus:ring-gray-900"
-                        data-placeholder-en="Last name" data-placeholder-fa="نام خانوادگی">
-                </div>
-                <input type="email" placeholder="Email address"
-                    class="w-full px-6 py-4 border bg-white rounded-2xl focus:outline-none focus:ring-2 focus:ring-gray-900"
-                    data-placeholder-en="Email address" data-placeholder-fa="ایمیل">
-                <textarea placeholder="Tell me about your project" rows="4"
-                    class="w-full px-6 py-4 border bg-white rounded-3xl focus:outline-none focus:ring-2 focus:ring-gray-900 resize-y"
-                    data-placeholder-en="Tell me about your project"
-                    data-placeholder-fa="درباره پروژه‌تان بگویید"></textarea>
-
-                <button type="button"
-                    class="w-full py-4 bg-gray-900 hover:bg-black text-white rounded-2xl font-medium transition-all btn-primary">
-                    <span data-lang="en">Send message</span>
-                    <span data-lang="fa" style="display:none;">ارسال پیام</span>
-                </button>
-            </form>
-
-            <div class="mt-8 text-sm text-gray-500">
-                alireza.khatibi008@gmail.com &nbsp;•&nbsp; +98 935 857 1537
-            </div>
+    <section
+      id="contact"
+      class="section max-w-screen-2xl mx-auto px-8 py-20 bg-gray-50 m-12 rounded-3xl"
+    >
+      <div class="max-w-xl mx-auto text-center">
+        <div
+          class="uppercase tracking-[3px] text-xs font-medium text-gray-500 mb-4"
+          data-lang="en"
+        >
+          LET’S WORK TOGETHER
         </div>
+        <div
+          class="uppercase tracking-[3px] text-xs font-medium text-gray-500 mb-4"
+          data-lang="fa"
+          style="display: none"
+        >
+          بیایید با هم کار کنیم
+        </div>
+        <h2 class="text-5xl font-semibold tracking-tighter mb-6">
+          <span data-lang="en">Ready to build something exceptional?</span>
+          <span data-lang="fa" style="display: none"
+            >آماده‌اید چیزی استثنایی بسازیم؟</span
+          >
+        </h2>
+        <p class="text-gray-600 mb-10" data-lang="en">
+          I’m currently taking on a limited number of new projects in fintech
+          and digital product design.
+        </p>
+        <p class="text-gray-600 mb-10" data-lang="fa" style="display: none">
+          در حال حاضر تعداد محدودی پروژه جدید در حوزه فین‌تک و طراحی محصول
+          دیجیتال می‌پذیرم.
+        </p>
+
+        <form class="space-y-4 text-left max-w-lg mx-auto">
+          <div class="grid grid-cols-2 gap-4">
+            <input
+              type="text"
+              placeholder="First name"
+              class="w-full px-6 py-4 border bg-white rounded-2xl focus:outline-none focus:ring-2 focus:ring-gray-900"
+              data-placeholder-en="First name"
+              data-placeholder-fa="نام"
+            />
+            <input
+              type="text"
+              placeholder="Last name"
+              class="w-full px-6 py-4 border bg-white rounded-2xl focus:outline-none focus:ring-2 focus:ring-gray-900"
+              data-placeholder-en="Last name"
+              data-placeholder-fa="نام خانوادگی"
+            />
+          </div>
+          <input
+            type="email"
+            placeholder="Email address"
+            class="w-full px-6 py-4 border bg-white rounded-2xl focus:outline-none focus:ring-2 focus:ring-gray-900"
+            data-placeholder-en="Email address"
+            data-placeholder-fa="ایمیل"
+          />
+          <textarea
+            placeholder="Tell me about your project"
+            rows="4"
+            class="w-full px-6 py-4 border bg-white rounded-3xl focus:outline-none focus:ring-2 focus:ring-gray-900 resize-y"
+            data-placeholder-en="Tell me about your project"
+            data-placeholder-fa="درباره پروژه‌تان بگویید"
+          ></textarea>
+
+          <button
+            type="button"
+            class="w-full py-4 bg-gray-900 hover:bg-black text-white rounded-2xl font-medium transition-all btn-primary"
+          >
+            <span data-lang="en">Send message</span>
+            <span data-lang="fa" style="display: none">ارسال پیام</span>
+          </button>
+        </form>
+
+        <div class="mt-8 text-sm text-gray-500">
+          hesam.khalouei8@gmail.com &nbsp;•&nbsp; +98 938 262 5211
+        </div>
+      </div>
     </section>
 
     <footer class="border-t py-8">
-        <div class="max-w-screen-2xl mx-auto px-8 text-center text-sm text-gray-400">
-            <span data-lang="en">© 2026 Alireza Bazli Khatibi. All rights reserved.</span>
-            <span data-lang="fa" style="display:none;">© ۲۰۲۶ علیرضا بزلی خطیبی. تمامی حقوق محفوظ است.</span>
-        </div>
+      <div
+        class="max-w-screen-2xl mx-auto px-8 text-center text-sm text-gray-400"
+      >
+        <span data-lang="en"
+          >© 2026 Amirhesam Khalouei. All rights reserved.</span
+        >
+        <span data-lang="fa" style="display: none"
+          >© ۲۰۲۶ امیرحسام خالویی. تمامی حقوق محفوظ است.</span
+        >
+      </div>
     </footer>
 
     <script>
-        // ----- Language handling -----
-        let currentLang = 'en';
+      // ----- Language handling -----
+      let currentLang = "en";
 
-        function toggleLanguage() {
-            currentLang = currentLang === 'en' ? 'fa' : 'en';
-            applyLanguage(currentLang);
+      function toggleLanguage() {
+        currentLang = currentLang === "en" ? "fa" : "en";
+        applyLanguage(currentLang);
+      }
+
+      function applyLanguage(lang) {
+        const htmlRoot = document.getElementById("html-root");
+        const langLabel = document.getElementById("langLabel");
+
+        if (lang === "fa") {
+          htmlRoot.setAttribute("dir", "rtl");
+          htmlRoot.setAttribute("lang", "fa");
+          langLabel.textContent = "English";
+        } else {
+          htmlRoot.setAttribute("dir", "ltr");
+          htmlRoot.setAttribute("lang", "en");
+          langLabel.textContent = "فارسی";
         }
 
-        function applyLanguage(lang) {
-            const htmlRoot = document.getElementById('html-root');
-            const langLabel = document.getElementById('langLabel');
+        // Show/hide text elements based on data-lang
+        document.querySelectorAll("[data-lang]").forEach((el) => {
+          if (el.getAttribute("data-lang") === lang) {
+            el.style.display = "";
+          } else {
+            el.style.display = "none";
+          }
+        });
 
-            if (lang === 'fa') {
-                htmlRoot.setAttribute('dir', 'rtl');
-                htmlRoot.setAttribute('lang', 'fa');
-                langLabel.textContent = 'English';
-            } else {
-                htmlRoot.setAttribute('dir', 'ltr');
-                htmlRoot.setAttribute('lang', 'en');
-                langLabel.textContent = 'فارسی';
-            }
+        // Update placeholders
+        document.querySelectorAll("[data-placeholder-en]").forEach((el) => {
+          if (lang === "en") {
+            el.placeholder = el.getAttribute("data-placeholder-en");
+          } else {
+            el.placeholder =
+              el.getAttribute("data-placeholder-fa") || el.placeholder;
+          }
+        });
 
-            // Show/hide text elements based on data-lang
-            document.querySelectorAll('[data-lang]').forEach(el => {
-                if (el.getAttribute('data-lang') === lang) {
-                    el.style.display = '';
-                } else {
-                    el.style.display = 'none';
-                }
-            });
+        // Adjust text alignment for inputs / textarea in RTL
+        const inputs = document.querySelectorAll("input, textarea");
+        inputs.forEach((el) => {
+          el.style.direction = lang === "fa" ? "rtl" : "ltr";
+          el.style.textAlign = lang === "fa" ? "right" : "left";
+        });
 
-            // Update placeholders
-            document.querySelectorAll('[data-placeholder-en]').forEach(el => {
-                if (lang === 'en') {
-                    el.placeholder = el.getAttribute('data-placeholder-en');
-                } else {
-                    el.placeholder = el.getAttribute('data-placeholder-fa') || el.placeholder;
-                }
-            });
-
-            // Adjust text alignment for inputs / textarea in RTL
-            const inputs = document.querySelectorAll('input, textarea');
-            inputs.forEach(el => {
-                el.style.direction = lang === 'fa' ? 'rtl' : 'ltr';
-                el.style.textAlign = lang === 'fa' ? 'right' : 'left';
-            });
-
-            // Adjust form grid (first/last name) ordering in RTL
-            const nameGrid = document.querySelector('.grid.grid-cols-2.gap-4');
-            if (nameGrid) {
-                nameGrid.style.direction = lang === 'fa' ? 'rtl' : 'ltr';
-            }
-
-            // Fix hero button arrow icons already handled with data-lang on <i> elements
-            // Nav underline hover is fine.
-
-            // Add a class to body for additional RTL tweaks if needed
-            document.body.classList.toggle('rtl', lang === 'fa');
+        // Adjust form grid (first/last name) ordering in RTL
+        const nameGrid = document.querySelector(".grid.grid-cols-2.gap-4");
+        if (nameGrid) {
+          nameGrid.style.direction = lang === "fa" ? "rtl" : "ltr";
         }
 
-        // ----- Existing scroll animations -----
-        function initScrollAnimations() {
-            const sections = document.querySelectorAll('.section');
+        // Fix hero button arrow icons already handled with data-lang on <i> elements
+        // Nav underline hover is fine.
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.15 });
+        // Add a class to body for additional RTL tweaks if needed
+        document.body.classList.toggle("rtl", lang === "fa");
+      }
 
-            sections.forEach(section => {
-                observer.observe(section);
+      // ----- Existing scroll animations -----
+      function initScrollAnimations() {
+        const sections = document.querySelectorAll(".section");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
             });
-        }
+          },
+          { threshold: 0.15 },
+        );
 
-        function toggleMobileMenu() {
-            alert('Mobile menu opened (demo) / منوی موبایل باز شد (نسخه نمایشی)');
-        }
+        sections.forEach((section) => {
+          observer.observe(section);
+        });
+      }
 
-        function init() {
-            initScrollAnimations();
+      function toggleMobileMenu() {
+        alert("Mobile menu opened (demo) / منوی موبایل باز شد (نسخه نمایشی)");
+      }
 
-            // Trigger first section
-            setTimeout(() => {
-                const about = document.getElementById('about');
-                if (about) about.classList.add('visible');
-            }, 600);
+      function init() {
+        initScrollAnimations();
 
-            // Add subtle active state to nav links on click
-            document.querySelectorAll('a[href^="#"]').forEach(link => {
-                link.addEventListener('click', function () {
-                    document.querySelectorAll('a[href^="#"]').forEach(l => l.classList.remove('nav-active'));
-                    this.classList.add('nav-active');
-                });
-            });
+        // Trigger first section
+        setTimeout(() => {
+          const about = document.getElementById("about");
+          if (about) about.classList.add("visible");
+        }, 600);
 
-            // Initialize language
-            applyLanguage(currentLang);
-        }
+        // Add subtle active state to nav links on click
+        document.querySelectorAll('a[href^="#"]').forEach((link) => {
+          link.addEventListener("click", function () {
+            document
+              .querySelectorAll('a[href^="#"]')
+              .forEach((l) => l.classList.remove("nav-active"));
+            this.classList.add("nav-active");
+          });
+        });
 
-        window.onload = init;
+        // Initialize language
+        applyLanguage(currentLang);
+      }
+
+      window.onload = init;
     </script>
-</body>
-
+  </body>
 </html>
